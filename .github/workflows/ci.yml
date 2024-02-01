@@ -15,7 +15,7 @@ jobs:
       - name: Install Java
         uses: actions/setup-java@v1
         with:
-          java-version: "11"
+          java-version: "17"
 
       - name: Build with gradle!
         working-directory: .
@@ -31,7 +31,7 @@ jobs:
 
   system-test:
     runs-on: ubuntu-latest
-    needs: builds-and-test-please
+    needs: build-and-test-please
 
     steps:
       - uses: actions/checkout@v1
